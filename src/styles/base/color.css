@@ -1,0 +1,47 @@
+body {
+  background: var(--bg-body);
+}
+
+.clr-accent-900 {
+  color: var(--clr-accent-900);
+}
+
+.clr-accent-400 {
+  color: var(--clr-accent-400);
+}
+
+.clr-accent-200 {
+  color: var(--clr-accent-200);
+}
+
+.clr-accent-0 {
+  color: var(--clr-accent-0);
+}
+
+.bg-light-red-500 {
+  background: var(--clr-light-red-500);
+}
+
+.bg-galactic-blue-500 {
+  background: var(--clr-galactic-blue-500);
+}
+
+.bg-summer-yellow-500 {
+  background: var(--clr-summer-yellow-500);
+}
+
+.bg-dark-purple-500 {
+  background: var(--clr-dark-purple-500);
+}
+
+.bg-pink-500 {
+  background: var(--clr-pink-500);
+}
+
+.bg-cyan-500 {
+  background: var(--clr-cyan-500);
+}
+
+.bg-dark {
+  background: var(--clr-dark);
+}

@@ -1,0 +1,70 @@
+.extra {
+  margin-block-start: 4rem;
+}
+
+.extra .wraps {
+  display: grid;
+  border-radius: 0.5rem;
+  padding: 2.5rem 1rem;
+}
+
+.extra .wraps .wrap-des {
+  grid-template-columns: subgrid;
+  justify-items: center;
+  text-align: center;
+}
+
+.extra .wraps .wrap-des :nth-child(2) {
+  margin-block-start: 1.5rem;
+}
+
+.extra .wraps .wrap-des :nth-child(3) {
+  margin-block-start: 2.5rem;
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+  .extra {
+    margin-block-start: 5rem;
+  }
+
+  .extra .wraps {
+    padding: 4rem 2.5rem;
+  }
+
+  .extra .wraps .wrap-des {
+    width: min(100%, 33.75rem);
+    justify-self: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .extra {
+    margin-block-start: 7.5rem;
+  }
+
+  .extra .wraps {
+    padding: 5rem 4rem;
+  }
+
+  .extra .wraps .wrap-des {
+    display: grid;
+    justify-items: unset;
+    text-align: left;
+    grid-template-columns: 1fr max-content;
+    gap: 1rem;
+  }
+
+  .extra .wraps .wrap-des :nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .extra .wraps .wrap-des :nth-child(2) {
+    width: min(100%, 33.75rem);
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .extra .wraps .wrap-des :nth-child(3) {
+    height: fit-content;
+    grid-area: 1 / 2 / 3 / 3;
+  }
+}

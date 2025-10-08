@@ -1,0 +1,44 @@
+body:has(.header) {
+  padding: 6.5rem 0 0 0;
+}
+
+.header {
+  background-color: var(--clr-accent-200);
+  position: fixed;
+  width: 100svw;
+  z-index: 10;
+  top: 0;
+}
+
+.header .wraps {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.header .wraps img {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+  body:has(.header) {
+    padding: 8rem 0 0 0;
+  }
+
+  .header .wraps img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (min-width: 600px) {
+  body:has(.header) {
+    padding: 7.5rem 0 0 0;
+  }
+
+  .header .wraps {
+    padding: 2rem 0;
+  }
+}

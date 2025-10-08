@@ -1,0 +1,35 @@
+.hero .wraps .wrap-intro {
+  text-align: center;
+}
+
+.hero .wraps .wrap-intro.flow>*+* {
+  margin-block-start: 1.25rem
+}
+
+
+@media (max-width: 599px) {
+  .hero .wraps .wrap-intro {
+    margin-block-start: 0.5rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+  .hero .wraps .wrap-intro {
+    margin-block-start: 1rem;
+    width: min(35rem);
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero .wraps .wrap-intro {
+    margin-block-start: 1.5rem;
+    width: min(47rem);
+    margin-inline: auto;
+  }
+
+  .hero .wraps .wrap-intro p {
+    width: min(32rem);
+    margin-inline: auto;
+  }
+}

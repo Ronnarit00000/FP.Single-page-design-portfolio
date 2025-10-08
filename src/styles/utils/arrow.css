@@ -1,0 +1,26 @@
+.arrow-left,
+.arrow-right {
+  display: block;
+  font: inherit;
+  font-size: 2rem;
+  line-height: 1;
+
+  border: none;
+  border-radius: 999px;
+  padding: 0;
+  width: 4rem;
+  height: 4rem;
+
+  background: var(--clr-dark);
+  color: var(--clr-light);
+
+  &:hover {
+    cursor: pointer;
+    background: var(--clr-galactic-blue-500);
+  }
+
+  &:focus {
+    outline: 0.125rem solid var(--clr-galactic-blue-500);
+    outline-offset: 0.125rem;
+  }
+}

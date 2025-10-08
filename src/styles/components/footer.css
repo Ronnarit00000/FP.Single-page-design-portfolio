@@ -1,0 +1,24 @@
+.footer .wraps {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.footer .wraps img {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+  .footer .wraps img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .footer .wraps {
+    padding: 2rem 0;
+  }
+}
