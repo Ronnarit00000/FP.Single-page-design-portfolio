@@ -3,7 +3,7 @@
   margin-inline: auto;
   display: grid;
   grid-auto-flow: column;
-  gap: 1rem;
+  gap: 1.125em;
   position: relative;
 
   overflow-x: scroll;
@@ -14,6 +14,7 @@
 .carousel img {
   object-fit: cover;
   scroll-snap-align: center;
+  border-radius: 0.5em;
 }
 
 .carousel span {
@@ -77,6 +78,7 @@
 
 @media (min-width: 600px) and (max-width: 999px) {
   .carousel {
+    gap: 2em;
     grid-auto-columns: 33.75rem;
     grid-auto-rows: 22.5rem;
     scroll-padding-inline: 1.5rem;
@@ -85,6 +87,7 @@
 
 @media (min-width: 1000px) {
   .carousel {
+    gap: 2em;
     grid-auto-columns: 33.75rem;
     grid-auto-rows: 22.5rem;
     scroll-padding-inline: 15rem;
