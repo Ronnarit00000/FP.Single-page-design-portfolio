@@ -1,67 +1,92 @@
-.carousel .handler {
+.carousel {
   width: min(100%, 90rem);
-  overflow-x: hidden;
   margin-inline: auto;
   display: grid;
-  justify-content: center;
-  gap: 2em;
+  grid-auto-flow: column;
+  gap: 1rem;
+  position: relative;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
-.carousel .handler span {
-  display: block;
+.carousel img {
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+
+.carousel span {
   border: none;
-  outline: none;
   background: transparent;
 }
 
-.carousel .handler img {
-  object-fit: cover;
+.carousel::scroll-button(left),
+.carousel::scroll-button(right) {
+  margin-block-start: 2.5rem;
+  display: block;
+  font: inherit;
+  font-size: 2rem;
+  line-height: 0;
+
+  border: none;
+  border-radius: 999px;
+  padding: 0;
+  width: 4rem;
+  height: 4rem;
+
+  background: var(--clr-dark);
+  color: var(--clr-light);
 }
 
-.carousel .handler img:nth-child(1) {
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
-  object-position: right;
+.carousel::scroll-button(left):hover,
+.carousel::scroll-button(right):hover {
+  cursor: pointer;
+  background: var(--clr-galactic-blue-500);
 }
 
-.carousel .handler img:nth-child(2) {
-  border-radius: 0.5em;
+.carousel::scroll-button(left):focus,
+.carousel::scroll-button(right):focus {
+  outline: 0.125rem solid var(--clr-galactic-blue-500);
+  outline-offset: 0.125rem;
 }
 
-.carousel .handler img:nth-child(3) {
-  border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
-  object-position: left;
+.carousel::scroll-button(left) {
+  content: url("/assets/icon-arrow-left.svg");
+  position: absolute;
+  right: calc(50% + 0.5rem);
 }
 
-.carousel .controller {
-  margin: 3em 0 1em 0;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
+.carousel::scroll-button(right) {
+  content: url("/assets/icon-arrow-right.svg");
+  position: absolute;
+  left: calc(50% + 0.5rem);
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 599px) {
-  .carousel .handler {
-    display: grid;
-    gap: 1em;
-    grid-template-columns: minmax(1rem, 1fr) minmax(18rem, 1fr) minmax(1rem, 1fr);
-    grid-template-rows: 11.25rem;
+  .carousel {
+    grid-auto-columns: 17.5rem;
+    grid-auto-rows: 11.25rem;
+    scroll-padding-inline: 1.5rem;
   }
 }
 
 @media (min-width: 600px) and (max-width: 999px) {
-  .carousel .handler {
-    display: grid;
-    grid-template-columns: minmax(1rem, 1fr) minmax(30rem, 1fr) minmax(1rem, 1fr);
-    grid-template-rows: 22.5rem;
+  .carousel {
+    grid-auto-columns: 33.75rem;
+    grid-auto-rows: 22.5rem;
+    scroll-padding-inline: 1.5rem;
   }
 }
 
 @media (min-width: 1000px) {
-  .carousel .handler {
-    display: grid;
-    grid-template-columns: minmax(2rem, 1fr) 33.75rem minmax(2rem, 1fr);
-    grid-template-rows: 22.5rem;
+  .carousel {
+    grid-auto-columns: 33.75rem;
+    grid-auto-rows: 22.5rem;
+    scroll-padding-inline: 15rem;
   }
 }

@@ -1,5 +1,6 @@
 .work {
   margin-block-start: 4rem;
+  padding-block-end: 6.5rem;
 }
 
 .work> :nth-child(1) {
